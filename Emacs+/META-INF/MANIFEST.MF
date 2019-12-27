@@ -24,3 +24,4 @@ Eclipse-LazyStart: true
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: com.mulgasoft.emacsplus,
  com.mulgasoft.emacsplus.commands
+Automatic-Module-Name: com.mulgasoft.emacsplus

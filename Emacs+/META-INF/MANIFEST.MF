@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.0
 Bundle-SymbolicName: com.mulgasoft.emacsplus;singleton:=true
-Bundle-Version: 4.2.0
+Bundle-Version: 4.3.0
 Bundle-Vendor: %Bundle-Vendor.0
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.3.0",
  org.eclipse.ui;bundle-version="3.3.0",
@@ -25,3 +25,4 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: com.mulgasoft.emacsplus,
  com.mulgasoft.emacsplus.commands
 Automatic-Module-Name: com.mulgasoft.emacsplus
+Import-Package: javax.inject;version="1.0.0"

@@ -12,10 +12,14 @@ package com.mulgasoft.emacsplus.commands;
 import java.util.Map;
 import java.util.Set;
 
+import javax.inject.Inject;
+
 import org.eclipse.core.commands.Command;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ParameterizedCommand;
 import org.eclipse.core.commands.common.NotDefinedException;
+import org.eclipse.core.runtime.ILog;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.bindings.Binding;
 import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.jface.text.IDocument;
@@ -43,6 +47,8 @@ public class CommandDescribeHandler extends MinibufferExecHandler implements INo
 	private static String CMD_DESC_HEADING= EmacsPlusActivator.getResourceString("Cmd_DescHeading");   //$NON-NLS-1$
 	private static String CMD_PARAM_HEADING= EmacsPlusActivator.getResourceString("Cmd_ParamHeading"); //$NON-NLS-1$
 	
+	private ILog   logger  = Platform.getLog(CommandDescribeHandler.class);
+
 	/**
 	 * @see com.mulgasoft.emacsplus.minibuffer.IMinibufferExecutable#getMinibufferPrefix()
 	 */
@@ -65,7 +71,6 @@ public class CommandDescribeHandler extends MinibufferExecHandler implements INo
 	 * @see com.mulgasoft.emacsplus.minibuffer.IMinibufferExecutable#executeResult(ITextEditor, java.lang.Object)
 	 */
 	public boolean doExecuteResult(ITextEditor editor, Object minibufferResult) {
-
 		if (minibufferResult != null) {
 			EmacsPlusConsole console = EmacsPlusConsole.getInstance();
 			console.clear();

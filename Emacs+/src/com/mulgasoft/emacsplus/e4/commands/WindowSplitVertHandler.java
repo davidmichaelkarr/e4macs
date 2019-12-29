@@ -9,6 +9,8 @@
  */
 package com.mulgasoft.emacsplus.e4.commands;
 
+import org.eclipse.core.runtime.ILog;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 
 /**
@@ -17,9 +19,11 @@ import org.eclipse.e4.core.contexts.IEclipseContext;
  * @author Mark Feber - initial API and implementation
  */
 public class WindowSplitVertHandler extends E4WindowHandler<WindowSplitCmd> {
-
+    private ILog    logger  = Platform.getLog(WindowSplitVertHandler.class);
+    
 	public WindowSplitVertHandler() {
 		super(WindowSplitCmd.class);
+		
 	}
 	
 	@Override

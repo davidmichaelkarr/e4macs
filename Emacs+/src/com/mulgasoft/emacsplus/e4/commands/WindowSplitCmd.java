@@ -1,7 +1,10 @@
 package com.mulgasoft.emacsplus.e4.commands;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.eclipse.core.runtime.ILog;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.e4.core.contexts.Active;
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.model.application.ui.MElementContainer;
@@ -27,6 +30,8 @@ import static org.eclipse.e4.ui.workbench.modeling.EModelService.BELOW;
  */
 public class WindowSplitCmd extends E4WindowCmd {
 	
+    private ILog   logger  = Platform.getLog(WindowSplitCmd.class);
+
 	private static final float ratio = 0.5f;
 
 	public static int getDirection(boolean horizontal) {
